@@ -1,0 +1,53 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#ondescountheading{
+    background-color: white;
+    height: 70px;
+}
+h1{
+    padding: 20px;
+    font-size: 40px;
+}
+
+#imgesanddesc{
+    display: flex;
+    padding: 20px;
+    overflow-x: visible;
+    overflow-y: hidden;
+}
+
+.img{
+    display: inline;
+    padding: 20px;
+    border: 2px dashed black;
+    border-radius: 20px;
+    margin: 10px;
+
+}
+
+.img img{
+    position: relative;
+    display: inline-block;
+    height: 500px;
+    width: auto;
+}
+
+#text {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        color: white;
+        background-color: rgba(0, 0, 0, 0.7);
+        margin: 50px;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 18px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        text-align: center;
+}
+
+.img:hover #text {
+    opacity: 1;
+}
