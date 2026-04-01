@@ -1,53 +1,66 @@
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#ondescountheading{
-    background-color: white;
-    height: 70px;
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(https://img.freepik.com/premium-vector/shoes-prints-circles-background_144316-4660.jpg?w=1380);
+  background-size: cover;
+  background-position: center;
 }
-h1{
-    padding: 20px;
-    font-size: 40px;
+#ondescountheading {
+  background-color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 24px 20px;
 }
-
-#imgesanddesc{
-    display: flex;
-    padding: 20px;
-    overflow-x: visible;
-    overflow-y: hidden;
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
 }
-
-.img{
-    display: inline;
-    padding: 20px;
-    border: 2px dashed black;
-    border-radius: 20px;
-    margin: 10px;
-
+.imgesanddesc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
-
-.img img{
-    position: relative;
-    display: inline-block;
-    height: 500px;
-    width: auto;
+.img {
+  position: relative;
+  width: min(100%, 520px);
+  border: 2px dashed black;
+  border-radius: 20px;
+  overflow: hidden;
 }
-
-#text {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        color: white;
-        background-color: rgba(0, 0, 0, 0.7);
-        margin: 50px;
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 18px;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        text-align: center;
+.img img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
-
-.img:hover #text {
-    opacity: 1;
+.text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 14px;
+  border-radius: 5px;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+.img:hover .text {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  #imgesanddesc {
+    padding: 14px;
+    gap: 14px;
+  }
+  .img {
+    width: 100%;
+  }
 }

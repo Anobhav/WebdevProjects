@@ -1,90 +1,99 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>
-        What's New In Store
-    </title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's New In Store</title>
     <style>
-        #heading {
-            text-align: center;
-            font-family: fantasy;
-            font-size: 60px;
+      body {
+        margin: 0;
+        padding: 16px;
+        background-color: floralwhite;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #111;
+      }
+      #heading {
+        text-align: center;
+        font-family: fantasy;
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        margin-bottom: 16px;
+      }
+      #bannerimg {
+        padding: 20px;
+        border-radius: 50px;
+        overflow: hidden;
+      }
+      #bannerimg img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 50px;
+      }
+      #dunks,
+      #AIRFORCES,
+      #Jordans {
+        padding: 20px;
+      }
+      .section-title {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+        font-family: fantasy;
+        margin-bottom: 18px;
+      }
+      .dunks_separate_images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .dunks_separate_images div {
+        flex: 1 1 320px;
+        display: flex;
+        justify-content: center;
+      }
+      .dunks_separate_images img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 20px;
+      }
+      @media (max-width: 720px) {
+        body {
+          padding: 12px;
         }
-
         #bannerimg {
-            padding: 20px;
-            align-self: center;
-            height: 400px;
-            width: auto;
-            border-radius: 50px;
-            overflow-x: scroll;
-            overflow-y: hidden;
+          padding: 12px;
         }
-
-        #dunkscontainer {
-            display: flex;
-            padding: 40px;
+        .section-title {
+          font-size: 2rem;
         }
-
-        #dunks {
-            padding: 40px;
-        }
-        #AIRFORCES {
-            padding: 40px;
-        }
-        #Jordans{
-            padding: 40px;
-        }
+      }
     </style>
-</head>
-
-<body style="background-color: floralwhite">
-    <p id="heading"> Heats </p>
+  </head>
+  <body>
+    <p id="heading">Heats</p>
     <div id="bannerimg">
-        <img src="images/banner.png" alt="img can't be loaded">
+      <img src="images/banner.png" alt="banner image" />
     </div>
     <div id="dunks">
-        <p style="font-size: 40px; font-family: fantasy;">
-            DUNKS
-        <div id="dunks_seperarte_images" style="display: flex; padding: 10px; overflow-x: visible; overflow-y: hidden;">
-            <div id="image1dunks" style="display: inline;padding:20px;">
-                <img src="images/dunksimg1.jpg" alt="img cant be displayed" height="400px" width="600px">
-            </div>
-            <div id="image2dunks" style="display: inline; padding: 20px;">
-                <img src="images/img4.jpeg" alt="img cant be   displayed" height="400px" width="500px">
-            </div>
-        </div>
-        </p>
+      <p class="section-title">DUNKS</p>
+      <div class="dunks_separate_images">
+        <div><img src="images/dunksimg1.jpg" alt="dunks image 1" /></div>
+        <div><img src="images/img4.jpeg" alt="dunks image 2" /></div>
+      </div>
     </div>
     <div id="AIRFORCES">
-        <p style="font-size: 40px; font-family: fantasy;">
-            AIRFORCES
-        <div id="dunks_seperarte_images" style="display: flex; padding: 10px; overflow-x: visible; overflow-y: hidden;">
-            <div id="image1dunks" style="display: inline;padding:20px;">
-                <img src="images/airforces1.png" alt="img cant be displayed" height="400px" width="auto">
-            </div>
-            <div id="image2dunks" style="display: inline; padding: 20px;">
-                <img src="images/airfoces2.png" alt="img cant be   displayed" height="400px" width="auto">
-            </div>
-        </div>
-        </p>
+      <p class="section-title">AIRFORCES</p>
+      <div class="dunks_separate_images">
+        <div><img src="images/airforces1.png" alt="airforces image 1" /></div>
+        <div><img src="images/airfoces2.png" alt="airforces image 2" /></div>
+      </div>
     </div>
-
     <div id="Jordans">
-        <p style="font-size: 40px; font-family: fantasy;">
-            JORDANS
-        <div id="dunks_seperarte_images" style="display: flex; padding: 10px; overflow-x: visible; overflow-y: hidden;">
-            <div id="jordans1" style="display: inline;padding:20px;">
-                <img src="images/jordans1.png" alt="img cant be displayed" height="400px" width="auto">
-            </div>
-            <div id="jordans2" style="display: inline; padding: 20px;">
-                <img src="images/jordans2.png" alt="img cant be   displayed" height="400px" width="auto">
-            </div>
-        </div>
-        </p>
+      <p class="section-title">JORDANS</p>
+      <div class="dunks_separate_images">
+        <div><img src="images/jordans1.png" alt="jordans image 1" /></div>
+        <div><img src="images/jordans2.png" alt="jordans image 2" /></div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
